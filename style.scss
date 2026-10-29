@@ -1,5 +1,5 @@
-@import 'abstracts/tokens';
-@import 'abstracts/mixins';
+@import 'SCSS/tokens';
+@import 'SCSS/mixins';
 
 * {
   box-sizing: border-box;
@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-// Cards болон бусад компонент стилиуд
+// 3D Flip Cards стилиуд
 .flip-card {
   background-color: transparent;
   height: rem(220px);
@@ -34,5 +34,85 @@ body {
   &.flipped &__inner,
   &:hover &__inner {
     transform: rotateY(180deg);
+  }
+}
+
+// Layout болон Сайдбар (Зар мэдээ) байрлал, анимаци
+.page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+
+  @include respond(md) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+.sidebar {
+  width: 100%;
+
+  @include respond(md) {
+    width: 300px;
+    flex-shrink: 0;
+  }
+}
+
+.sidebar-widget {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: $border-radius-lg;
+  padding: 20px;
+  box-shadow: var(--shadow-glow);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+
+  &:hover, &:active {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(168, 85, 247, 0.4);
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.widget-list {
+  list-style: none;
+  padding: 0;
+  
+  li {
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.9rem;
+      margin-top: 4px;
+      color: var(--text-color);
+    }
   }
 }
