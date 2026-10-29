@@ -1,0 +1,42 @@
+$bg-main-dark: #0c0816;
+$bg-header-dark: #140e24;
+$bg-card-dark: #1c1333;
+$text-dark: #f3e8ff;
+$muted-dark: #c084fc;
+$accent-dark: #a855f7;
+
+$bg-main-light: #f0f6ff;
+$bg-header-light: #e0ecff;
+$bg-card-light: #ffffff;
+$text-light: #0f172a;
+$muted-light: #2563eb;
+$accent-light: #2563eb;
+
+$border-radius-lg: 16px;
+$breakpoint-md: 768px;
+
+:root {
+  --bg-main: #{$bg-main-dark};
+  --bg-header: #{$bg-header-dark};
+  --bg-card: #{$bg-card-dark};
+  --text-color: #{$text-dark};
+  --text-muted: #{$muted-dark};
+  --accent: #{$accent-dark};
+  --accent-light: #d8b4fe;
+  --border-color: rgba(168, 85, 247, 0.2);
+  --card-gradient: linear-gradient(135deg, #7e22ce 0%, #581c87 50%, #3b0764 100%);
+  --shadow-glow: 0 8px 25px rgba(126, 34, 206, 0.3);
+}
+
+[data-theme="light"] {
+  --bg-main: #{$bg-main-light};
+  --bg-header: #{$bg-header-light};
+  --bg-card: #{$bg-card-light};
+  --text-color: #{$text-light};
+  --text-muted: #{$muted-light};
+  --accent: #{$accent-light};
+  --accent-light: #1d4ed8;
+  --border-color: rgba(37, 99, 235, 0.2);
+  --card-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e3a8a 100%);
+  --shadow-glow: 0 8px 25px rgba(37, 99, 235, 0.15);
+}
