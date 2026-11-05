@@ -1,0 +1,43 @@
+@use "sass:map";
+@use "tokens";
+@use "functions" as fn;
+
+// Сонгосон theme-ийн token бүрийг CSS хувьсагч болгон гаргана
+@mixin theme-vars($name) {
+  @each $key, $value in map.get(tokens.$themes, $name) {
+    --#{$key}: #{$value};
+  }
+}
+
+// Утасны хүрээний өргөнөөс хамаарсан responsive (container query)
+@mixin frame-up($key) {
+  @container frame (min-width: #{fn.bp($key)}) {
+    @content;
+  }
+}
+
+// Жинхэнэ жижиг дэлгэц
+@mixin phone-only {
+  @media (max-width: fn.bp(phone)) {
+    @content;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin surface($r: md) {
+  background-color: fn.color(bg-card);
+  border: 1px solid fn.color(border-color);
+  border-radius: fn.radius($r);
+}
+
+@mixin pill($bg, $fg: #fff) {
+  background: $bg;
+  color: $fg;
+  border-radius: fn.radius(pill);
+  font-weight: 700;
+}

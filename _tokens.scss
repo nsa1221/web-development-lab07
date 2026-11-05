@@ -1,0 +1,40 @@
+// Design tokens: өнгө, радиус, breakpoint нэг л газар хадгалагдана.
+$themes: (
+  dark: (
+    bg-main: #0c0816,
+    bg-header: #140e24,
+    bg-card: #1c1333,
+    text-color: #f3e8ff,
+    text-muted: #c084fc,
+    accent: #a855f7,
+    accent-light: #d8b4fe,
+    border-color: rgba(168, 85, 247, 0.22),
+    card-gradient: linear-gradient(135deg, #7e22ce 0%, #581c87 50%, #3b0764 100%),
+    shadow-glow: 0 8px 25px rgba(126, 34, 206, 0.3),
+    frame-color: #1c1333,
+    badge-new: #f43f5e,
+    badge-update: #22c55e,
+    badge-info: #38bdf8
+  ),
+  light: (
+    bg-main: #f0f6ff,
+    bg-header: #e0ecff,
+    bg-card: #ffffff,
+    text-color: #0f172a,
+    text-muted: #2563eb,
+    accent: #2563eb,
+    accent-light: #1d4ed8,
+    border-color: rgba(37, 99, 235, 0.22),
+    card-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e3a8a 100%),
+    shadow-glow: 0 8px 25px rgba(37, 99, 235, 0.18),
+    frame-color: #cbd9f5,
+    badge-new: #e11d48,
+    badge-update: #16a34a,
+    badge-info: #0284c7
+  )
+);
+
+$radius: (sm: 8px, md: 12px, lg: 16px, xl: 40px, pill: 999px);
+$breakpoints: (phone: 600px, frame-wide: 700px);
+$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$ease-flip: cubic-bezier(0.4, 0, 0.2, 1);

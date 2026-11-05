@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="mn" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лаборатори 06 - EduHub Portal</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Toolbar -->
+<div class="wireframe-toolbar">
+  <span class="toolbar-title"><i class="fa-solid fa-flask"></i> Lab 06</span>
+  <div class="toolbar-btns">
+    <button class="tb-btn" id="themeToggleBtn" type="button" aria-label="Өнгөний горим солих">
+      <i class="fa-solid fa-moon" id="themeIcon"></i> <span id="themeText">Dark</span>
+    </button>
+    <button class="tb-btn view-btn active" id="btnMobile" type="button">📱 Утас</button>
+    <button class="tb-btn view-btn" id="btnDesktop" type="button">💻 Компьютер</button>
+  </div>
+</div>
+
+<div class="device-viewport phone-view" id="deviceViewport">
+  <div class="phone-mockup-frame">
+    <div class="phone-speaker-bar"></div>
+
+    <div class="phone-screen-area">
+
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="header-container">
+          <div class="logo"><i class="fa-solid fa-graduation-cap"></i> EduHub</div>
+          <button class="menu-toggle" id="menuToggle" type="button" aria-label="Цэс нээх" aria-expanded="false" aria-controls="navbar">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <nav class="navbar" id="navbar">
+            <ul class="nav-links">
+              <li><a href="#top" class="active">Нүүр</a></li>
+              <li><a href="#news">Зар мэдээ</a></li>
+              <li><a href="#courses">Хичээлүүд</a></li>
+              <li><a href="#media-section">Медиа сан</a></li>
+            </ul>
+            <div class="header-actions">
+              <button class="btn-secondary" type="button">Нэвтрэх</button>
+              <button class="btn-primary" type="button">Бүртгүүлэх</button>
+            </div>
+          </nav>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="hero-section" id="top">
+        <div class="hero-content">
+          <h1>Мэдээллийн Технологийн Онлайн Сургалт</h1>
+          <p>CSS3 3D Animation, Dark/Light Mode болон мультимедиа нэгтгэсэн интерактив портал.</p>
+          <div class="hero-stats">
+            <span><i class="fa-solid fa-book-open"></i> 4 хичээл</span>
+            <span><i class="fa-solid fa-video"></i> Видео лекц</span>
+            <span><i class="fa-solid fa-moon"></i> Dark / Light</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ЗАР МЭДЭЭ: hero-ийн доор, хамгийн түрүүнд харагдана -->
+      <section class="news-section" id="news" aria-labelledby="newsTitle">
+        <div class="section-header">
+          <h2 id="newsTitle"><i class="fa-solid fa-bullhorn"></i> Сургалтын зар мэдээ</h2>
+        </div>
+        <ul class="news-track">
+          <li class="news-card">
+            <div class="news-meta">
+              <span class="news-badge badge-new">Шинэ</span>
+              <time class="date">10 Сар 18</time>
+            </div>
+            <h3>ESP32 IoT лаборатори</h3>
+            <p>Мэдрэгч, OLED дэлгэцтэй шинэ лабораторийн даалгавар нээгдлээ.</p>
+          </li>
+          <li class="news-card">
+            <div class="news-meta">
+              <span class="news-badge badge-update">Шинэчлэл</span>
+              <time class="date">10 Сар 15</time>
+            </div>
+            <h3>Видео ба iFrame хэсэг</h3>
+            <p>Мультимедиа сан хэсэгт видео танилцуулга болон онлайн лекц нэмэгдлээ.</p>
+          </li>
+          <li class="news-card">
+            <div class="news-meta">
+              <span class="news-badge badge-update">Шинэчлэл</span>
+              <time class="date">10 Сар 12</time>
+            </div>
+            <h3>Dark / Light горим</h3>
+            <p>Дэлгэцийн өнгийг нэг товчоор сольдог шилжүүлэгч нэмэгдлээ.</p>
+          </li>
+          <li class="news-card">
+            <div class="news-meta">
+              <span class="news-badge badge-info">Мэдээ</span>
+              <time class="date">10 Сар 10</time>
+            </div>
+            <h3>3D Flip картууд</h3>
+            <p>Хичээл бүрийн картыг дарж эргүүлээд товч тайлбарыг харна.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- MAIN -->
+      <div class="page-container">
+        <main class="main-content">
+
+          <section id="courses">
+            <div class="section-header">
+              <h2><i class="fa-solid fa-layer-group"></i> Онцлох хичээлүүд</h2>
+              <p class="section-hint">Картыг дарж эргүүлнэ үү</p>
+            </div>
+
+            <div class="card-grid">
+
+              <!-- Card 1 -->
+              <div class="flip-card" tabindex="0" role="button" aria-label="HTML5 ба CSS3 хичээлийн карт, эргүүлэхийн тулд дарна уу">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front card-bg-unified">
+                    <div class="card-front-content">
+                      <div class="card-icon-container">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 лого" class="tech-card-image" loading="lazy">
+                      </div>
+                      <span class="card-tag">Front-End</span>
+                      <h3>HTML5 &amp; CSS3</h3>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="back-bg-image" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="back-content-overlay">
+                      <h3>HTML5 &amp; CSS3</h3>
+                      <p>Семантик бүтэц, Flexbox болон Grid ашиглан адаптив вэб сайт бүтээх.</p>
+                      <button class="flip-back-btn" type="button">Буцах</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="flip-card" tabindex="0" role="button" aria-label="Python Science хичээлийн карт, эргүүлэхийн тулд дарна уу">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front card-bg-unified">
+                    <div class="card-front-content">
+                      <div class="card-icon-container">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python лого" class="tech-card-image" loading="lazy">
+                      </div>
+                      <span class="card-tag">Programming</span>
+                      <h3>Python Science</h3>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="back-bg-image" style="background-image: url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="back-content-overlay">
+                      <h3>Python Science</h3>
+                      <p>NumPy, Pandas болон өгөгдөл боловсруулах практик курсууд.</p>
+                      <button class="flip-back-btn" type="button">Буцах</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="flip-card" tabindex="0" role="button" aria-label="ESP32 IoT хичээлийн карт, эргүүлэхийн тулд дарна уу">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front card-bg-unified">
+                    <div class="card-front-content">
+                      <div class="card-icon-container">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg" alt="ESP32 IoT лого" class="tech-card-image" loading="lazy">
+                      </div>
+                      <span class="card-tag">Hardware</span>
+                      <h3>ESP32 IoT</h3>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="back-bg-image" style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="back-content-overlay">
+                      <h3>ESP32 IoT</h3>
+                      <p>Мэдрэгч, OLED дэлгэц болон ухаалаг систем холболтын лаборатори.</p>
+                      <button class="flip-back-btn" type="button">Буцах</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="flip-card" tabindex="0" role="button" aria-label="Java ба ООП хичээлийн карт, эргүүлэхийн тулд дарна уу">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front card-bg-unified">
+                    <div class="card-front-content">
+                      <div class="card-icon-container">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java лого" class="tech-card-image" loading="lazy">
+                      </div>
+                      <span class="card-tag">Backend</span>
+                      <h3>Java &amp; ООП</h3>
+                    </div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div class="back-bg-image" style="background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="back-content-overlay">
+                      <h3>Java &amp; ООП</h3>
+                      <p>Объект хандлагат програмчлалын зарчим болон алгоритмын суурь мэдлэг.</p>
+                      <button class="flip-back-btn" type="button">Буцах</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- MULTIMEDIA -->
+          <section id="media-section" class="multimedia-section">
+            <div class="section-header">
+              <h2><i class="fa-solid fa-circle-play"></i> Мультимедиа &amp; Сургалтын видео</h2>
+            </div>
+            <div class="media-grid">
+              <div class="media-box">
+                <h3>Видео танилцуулга</h3>
+                <video controls preload="metadata">
+                  <source src="video/clip.mp4" type="video/mp4">
+                  <source src="video/clip.webm" type="video/webm">
+                  <track src="video/clip.mn.vtt" kind="subtitles" srclang="mn" label="Монгол" default>
+                  Таны хөтөч видеог дэмжихгүй байна.
+                </video>
+              </div>
+              <div class="media-box">
+                <h3>Онлайн лекц (iFrame)</h3>
+                <div class="iframe-container">
+                  <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    title="Сургалтын видео"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+      </div>
+
+      <footer class="site-footer">
+        <p>&copy; 2026 Мэдээллийн Технологийн Сургууль. Lab 06.</p>
+      </footer>
+
+    </div>
+
+    <div class="phone-home-bar"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

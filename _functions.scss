@@ -1,0 +1,21 @@
+@use "sass:map";
+@use "sass:math";
+@use "tokens";
+
+// px -> rem
+@function to-rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
+}
+
+@function radius($key) {
+  @return map.get(tokens.$radius, $key);
+}
+
+@function bp($key) {
+  @return map.get(tokens.$breakpoints, $key);
+}
+
+// CSS хувьсагч руу холбоос: color(accent) -> var(--accent)
+@function color($name) {
+  @return var(--#{$name});
+}
